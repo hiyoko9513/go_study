@@ -1,39 +1,25 @@
 package main
 
 import (
-	"fmt"
-	f "fmt"
+	//f "fmt"
+	. "fmt" // 推奨されないやり方ではある
+
 	// go mod ini <モジュール名>　を実行する必要がある
 	// <モジュール名>/foo
-	"udemy/foo"
+	"example.com/7.package/foo"
 )
 
 func appName() string {
+	// 関数で定義された変数、定数は関数でないのみ利用可能
 	const AppName = "Go App"
-	var Version = "1.0"
-	return AppName + "" + Version
+	var version = "1.0"
+	return AppName + "" + version
 }
-
-/*
-func appName(s string) (b string) {
-	var s string
-	const b = "string"
-	return b
-}
-
-func appName(s string) (b string) {
-	{
-		var s string
-		const b = "string"
-		return b
-	}
-}
-*/
 
 func main() {
-	// f.Println(foo.min)
+	// minはプライベートなので参照出来ない
+	//f.Println(foo.min)
+	Println(foo.ReturnMin())
 
-	f.Println(foo.ReturnMin())
-
-	fmt.Println(appName())
+	Println(appName())
 }

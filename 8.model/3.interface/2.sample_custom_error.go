@@ -29,6 +29,10 @@ func Do() (int, error) {
 func main() {
 	i, err := Do()
 	if err != nil {
+		// 直接は参照できない
+		//err.Message 出来ない
+
+		// 型アサーション
 		e, ok := err.(*CustomError)
 		if ok {
 			fmt.Println(e.ErrCode)
