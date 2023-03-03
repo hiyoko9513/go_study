@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// todo まとめる
 func producer(ch chan int, i int) {
 	ch <- i * 2
 }

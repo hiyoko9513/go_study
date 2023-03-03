@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:alpine3.17
+    ports:
+      - 5432:5432
+    volumes:
+      - db-store:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+#       - POSTGRES_HOST_AUTH_METHOD=trust #パスワードなしでアクセス出来る
+volumes:
+  db-store:

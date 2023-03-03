@@ -6,7 +6,10 @@ import (
 )
 
 func main() {
+	//wgを生成
 	wg := new(sync.WaitGroup)
+	// 待ち受けるgoroutineの数を設定
+	// ❗Done関数の実行待ち数
 	wg.Add(3)
 
 	go func() {

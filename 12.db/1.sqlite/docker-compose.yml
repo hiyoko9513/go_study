@@ -2,7 +2,6 @@ version: '3'
 services:
     sqlite3:
         image: keinos/sqlite3:3.40.1
-        stdin_open: true
         tty: true
         volumes:
-            - ./db/:/root/db/
+            - ./db/:/workspace
