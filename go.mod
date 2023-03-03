@@ -7,6 +7,7 @@ require (
 	github.com/joho/godotenv v1.5.1
 	github.com/lib/pq v1.10.7
 	github.com/mattn/go-sqlite3 v1.14.16
+	github.com/oklog/ulid/v2 v2.1.0
 	gopkg.in/go-ini/ini.v1 v1.67.0
 )
 
