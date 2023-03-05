@@ -15,6 +15,7 @@ require (
 )
 
 require (
+	entgo.io/ent v0.11.9 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/fatih/color v1.14.1 // indirect
 	github.com/goccy/go-yaml v1.9.8 // indirect
